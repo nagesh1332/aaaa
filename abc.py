@@ -110,7 +110,7 @@ print(final_accuracy)
 
 import os
 if final_accuracy < 0.92:
-    os.system("curl --user '<jenkins username>:<jenkins_password>' http://192.168.99.102:8080/view/mlops/job/retrain/build?token=retrain")
+    os.system("curl --user '<jenkins username>:<jenkins_password>'http://172.20.10.4:8080/:8080/view/mlops/job/retrain/build?token=retrain")
 else:
     print("Your New accuracy=",final_accuracy)
 final_accuracy=history.history["val_accuracy"][-1]
@@ -119,7 +119,7 @@ final_accuracy=history.history["val_accuracy"][-1]
 
 	import os
 	if final_accuracy < 0.92:
-	    os.system("curl --user '<jenkins user>:<jenkins password>' http://192.168.99.102:8080/view/mlops/job/retrain/build?token=retrain")
+	    os.system("curl --user '<jenkins user>:<jenkins password>' http://172.20.10.4:8080/L/job/job3/build?token=retrain")
 	else:
 	    print("Your New accuracy=",final_accuracy)
 
